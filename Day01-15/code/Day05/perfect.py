@@ -19,3 +19,23 @@ for num in range(1, 10000):
                 sum += num / factor
     if sum == num:
         print(num)
+        
+        
+        
+"""
+Author: Jason
+Date: 07/10/2019
+"""
+
+def perfect(num):
+    total = 0
+    for x in range(1, num):
+        if num % x == 0:
+            total += x
+    return total == num
+
+
+for i in range(1, 10000):
+    if perfect(i):
+        print(i)
+
