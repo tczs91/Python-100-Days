@@ -25,6 +25,11 @@ def narcissistic(num):
         return False
     else:
         total = (num % 10) ** 3
-        total += (num // 10 % 10)
-        total += (num//100)**3
+        total += (num // 10 % 10) ** 3
+        total += (num // 100) ** 3
         return total == num
+
+
+for x in range(100, 1000):
+    if narcissistic(x):
+        print(x)
