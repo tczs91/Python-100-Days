@@ -14,3 +14,17 @@ for num in range(100, 1000):
     high = num // 100
     if num == low ** 3 + mid ** 3 + high ** 3:
         print(num)
+
+        
+"""
+Author: Jason
+Date: 07/10/2019
+"""
+def narcissistic(num):
+    if num < 100 or num > 999:
+        return False
+    else:
+        total = (num % 10) ** 3
+        total += (num // 10 % 10)
+        total += (num//100)**3
+        return total == num
